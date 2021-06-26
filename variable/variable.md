@@ -1,4 +1,6 @@
+[toc]
 # 变量
+
 
 ## 命名规则
 
@@ -128,7 +130,8 @@ test();
 // undefined
 ```
 
-## TDZ
+## 暂时死区TDZ（Temporal Dead Zone）
+TDZ可以翻为"时间上暂时的无法达到的区域"，简称为"时间死区"或"暂时死区"。
 
 变量提升的现象在let声明中不起作用。变量要在let要在声明之后使用，不能在声明之前使用。
 ```js
@@ -142,8 +145,9 @@ const a = 'Tom'
 // Uncaught ReferenceError: Cannot access 'a' before initialization
 ```
 
+变量test在作用域中会先被提升到函数区域中的最上面，但这时会产生TDZ，如果在程序流程还未运行到test的声明语句时，算是在TDZ作用的期间，这时候访问test的值，就会抛出ReferenceError错误。
 ```js
-test = "hello";
+let test = "hello";
 function run() {
   console.log(test);
   let test = "tom";
@@ -151,6 +155,8 @@ function run() {
 run();
 //Uncaught ReferenceError: Cannot access 'test' before initialization
 ```
+
+参考：https://segmentfault.com/a/1190000008213835
 
 ## 全局污染
 
@@ -183,8 +189,8 @@ console.log(web)
 ```
 
 
-## 块作用域
-### 共同点
+# 块作用域
+## 共同点
 
 var/let/const共同点是全局作用域中定义的变量，可以在函数中使用。
 
@@ -239,7 +245,7 @@ console.log(web); //testOuter
 
 
 
-### var
+## var
 var会污染全局.
 ```js
 var i = 99
@@ -260,7 +266,7 @@ console.log(i);
 // 100
 ```
 
-### const
+##  const
 
 const声明的是一个常量，是不能改变的。为了好区分，常量名一般用大写的字母表示。
 
@@ -432,7 +438,7 @@ console.log(a);
 // {web: "google"}
 ```
 
-## undefine
+# undefine
 
 对声明但未赋值的变量, 输出的值为`undefined`，判断类型将显示为`undefined`, 表示值未定义, 但不报错。
 
@@ -464,7 +470,7 @@ function test(web) {
 console.log(test()); //undefined
 ```
 
-## null 
+# null 
 `null`用于定义一个空对象，即如果变量要用来保存引用类型，可以在初始化时将其设置为`null`.
 
 ```js
@@ -475,7 +481,7 @@ console.log(test);
 // null
 ```
 
-## 严格模式： “use strict”
+# 严格模式： “use strict”
 严格模式可以让我们及早发现错误，使代码更安全规范，推荐在代码中一直保持严格模式运行。
 
 变量必须使用关键词声明，未声明的变量不允许赋值。
