@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="1.js"></script> -->
+    <script>
+        // // 弱类型
+        // var a = "hello";
+        // console.log(typeof a);
+        // a = 66;
+        // console.log(typeof a);
+        // a = {}
+        // console.log(typeof a);
+
+        // // 变量提升
+        // function test() {
+        //     if (false) {
+        //         var a = 'hello';
+        //     }
+        //     console.log(a);
+        // }
+        // test();
+
+        // console.log(a)
+        // let a = 'Tom'
+
+        // // TDZ
+        // test = "hello";
+        // function run() {
+        //     console.log(test);
+        //     let test = "tom";
+
+        // }
+        // run();
+
+        // 块作用域
+        // var test1 = 'test1';
+
+        // function show1() {
+        //     return test1;
+        // }
+        // console.log(show1());
+
+        // let test2 = 'test2';
+
+        // function show2() {
+        //     return test2;
+        // }
+        // console.log(show2());
+
+        // const test3 = 'test3';
+
+        // function show3() {
+        //     return test3;
+        // }
+        // console.log(show3());
+
+
+
+        // function test() {
+        //     var web = "hello";
+
+        //     function innerTest() {
+        //         console.log(web);
+        //     }
+        //     innerTest(); //子函数结果: hello
+        //     console.log(web);
+        // }
+        // test(); //函数结果: hello
+        // console.log(web); //全局访问: web is not defined
+
+        // "use strict";
+        // web = 'hello'
+        // show();
+        // console.log(web)
+
+        // var i = 99
+        // for (var i = 0; i < 10; i++) {
+        //     console.log(i);
+        // }
+        // console.log(i);
+
+
+        // const URL = "https://www.baidu.com";
+        // URL = "https://www.google.com"; //产生错误
+
+        // const INFO = {
+        //     url: 'https://www.baidu.com',
+        //     port: '8080'
+        // };
+        // INFO.port = '443';
+        // console.log(INFO);
+
+
+        // const NAME = 'baidu';
+        // function show() {
+        //     const NAME = 'google';
+        //     return NAME;
+        // }
+        // console.log(show());
+        // console.log(NAME);
+
+        // const OBJA = {'lily':1};
+        // OBJA = {
+        //     'tom': 1
+        // };
+
+        //         const URL;
+        // URL = "https://www.google.com"; 
+        // //Uncaught TypeError: Assignment to constant variable.
+
+        // var web = 'hello'
+        // console.log(window.web)
+
+        // // window全局污染
+        // var screenLeft = 10;
+        // console.log(window.screenLeft);
+
+        // // window全局污染
+        // let screenLeft = 10;
+        // console.log(window.screenLeft);
+
+        // // 也就是说`let`声明赋值的变量，不会被挂载到`window`上面。
+        // let web = 'hello'
+        // console.log(window.web)
+
+        // // var 重复定义
+        // //优惠价
+        // var price = 90;
+        // //商品价格
+        // var price = 100;
+        // console.log(`商品优惠价格是:${price}`);
+
+        // // let 重复定义
+        // //优惠价
+        // let price = 90;
+        // //商品价格
+        // let price = 100;
+        // console.log(`商品优惠价格是:${price}`);
+
+        // "use strict"
+        // const HOST = {
+        //     url: "www.baidu.com",
+        //     port: 8888
+        // };
+        // HOST.port = 6666;
+        // console.log(HOST)
+
+        // Object.freeze(HOST)
+        // HOST.port = 5555;
+        // console.log(HOST)
+
+
+        // // 传值与传址
+        // let a = 100;
+        // let b = a;
+        // a = 200;
+        // console.log(b);
+        // console.log(a);
+
+        // // 传值与传址
+        // let a = {
+        //     web: "baidu"
+        // };
+        // let b = a;
+        // a.web = "google";
+        // console.log(b);
+        // console.log(a);
+
+        // // 声明但未赋值的变量返回类型为`undefined`,表示值未定义, 但不报错。
+        // // let a;
+        // console.log(a);
+        // console.log(typeof a);
+
+
+        // function test(web) {
+        //     console.log(web); //undefined
+        //     return web;
+        // }
+        // console.log(test()); //undefined
+
+        // var test = null;
+        // console.log(typeof test);
+        // console.log(test);
+
+        // // 严格模式
+        // "use strict";
+        // url = 'houdunren.com'; //url is not defined
+
+        // "use strict";
+        // function test() {
+        //     web = "baidu";
+        // }
+        // test();
+        // console.log(web); 
+
+        "use strict";
+        // var public = 'houdunren.com';
+        function test(name, name) {} 
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

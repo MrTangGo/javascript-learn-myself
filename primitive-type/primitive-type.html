@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let a = "hello";
+        // let b = new String("world");
+
+        // console.log(typeof a);
+        // console.log(typeof b);
+
+        // let a = "hello";
+        // let b = new String("Tom");
+        // console.log(a.length); //5
+        // console.log(b.length); //3
+
+        // // 字符串
+        // // 双引号与单引号
+        // let a = "she said:\"this is a book.\"";
+        // console.log(a);
+        // console.log("she said:'this is a book.'");
+        // console.log('she said:"this is a book."');
+
+        // // 格式化输出
+        // let year = "2021"
+        // let month = "5"
+        // let day = "20"
+        // console.log(`${year}年${month}月${day}日`);
+
+        // // 模板字面量的使用
+        // function show() {
+        //     return "baidu"
+        // };
+        // console.log(`www.${show()}.com`);
+
+        // console.log(`${5+1}`);
+    </script>
+</head>
+
+<body>
+    <!-- 模板字面量的使用例子 -->
+    <!-- <script>
+        let lesson = [{
+                title: "aaa"
+            },
+            {
+                title: "bbb"
+            },
+            {
+                title: "ccc"
+            },
+        ]
+        function template() {
+            return `<ul>
+                ${lesson.map(item => `<li>${item.title}</li>` ).join("")}
+                </ul>`
+        };
+        document.body.innerHTML = template();
+    </script> -->
+
+    <!-- 标签模板例子 -->
+    <script>
+        let year = 2021;
+        let month = 5;
+        let day = 20;
+
+        tag `${year}年 ${month}月 ${day} 日`
+
+        function tag(str, ...vars) {
+            console.log(str);
+            console.log(vars);
+        }
+    </script>
+
+    <!-- 标签模板例子 -->
+    <!-- <script>
+        let lessons = [{
+                title: "线性代数",
+                author: "等等"
+            },
+            {
+                title: "微积分",
+                author: "刘老师"
+            },
+            {
+                title: "概率论",
+                author: "等等"
+            },
+            {
+                title: "基础数学",
+                author: "刘老师"
+            },
+        ];
+
+        function template() {
+            return `<ul>
+                    ${lessons.map((item, key) => 
+                        link`<ul>作者：${item.author} 标题：${item.title}</ul>`
+                    ).join("")}
+                <ul>`
+        }
+
+        function link(str, ...vars) {
+            return str.map((item, key) => item +
+                (vars[key] ? vars[key].replace(
+                        '等等',
+                        "<a href='https://www.baidu.com'>等等</a>") :
+                    '')).join("")
+        }
+        document.body.innerHTML += template();
+    </script> -->
+</body>
+
+</html>
